@@ -1,37 +1,36 @@
-USE airbranch;
+USE [airbranch];
 GO
 SET ANSI_NULLS ON;
 GO
 SET QUOTED_IDENTIFIER ON;
 GO
 
-IF OBJECT_ID('dbo.TRIGGER1') IS NOT NULL
-    DROP TRIGGER dbo.TRIGGER1;
+IF OBJECT_ID('dbo.MyTrigger') IS NOT NULL
+    DROP TRIGGER dbo.MyTrigger;
 GO
-
-CREATE TRIGGER dbo.TRIGGER1 ON dbo.TABLE1
-AFTER UPDATE
-AS
 
 /*****************************************************************************
 
 Author:     Brian Gregory
-Created:    2016-04-28
+Created:    2017-??-??
 Overview:   General statement about WHAT the procedure is doing 
 
 Tables written to:
-  TABLE2
+  MyTable1
   
 Tables accessed:
-  TABLE3
+  MyTable2
 
 Modification History:
 When        Who                 What
 ----------  ------------------  ----------------------------------------
-2016-04-28  BGregory            Initial Version
+2017-??-??  BGregory            Initial Version
 
 *******************************************************************************/
 
+CREATE TRIGGER dbo.MyTrigger ON dbo.MyTable
+AFTER UPDATE
+AS
      SET NOCOUNT ON;
     BEGIN TRY
         -- Declare variables here if needed
@@ -48,4 +47,5 @@ When        Who                 What
         DECLARE @msg nvarchar(2048) = ERROR_MESSAGE();
         RAISERROR(@msg, 16, 1);
     END CATCH;
+
 GO

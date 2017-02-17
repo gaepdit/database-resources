@@ -5,21 +5,18 @@ GO
 SET QUOTED_IDENTIFIER ON;
 GO
 
-IF OBJECT_ID('dbo.MyFunction') IS NOT NULL
-    DROP FUNCTION dbo.MyFunction;
+IF OBJECT_ID('dbo.MyView') IS NOT NULL
+    DROP VIEW dbo.MyView;
 GO
 
 /*****************************************************************************
 
 Author:     Brian Gregory
 Created:    2017-??-??
-Overview:   General statement about WHAT the function is doing 
+Overview:   General statement about the purpose/use of the view
 
-Input Parameters:
-  @input - description
-  
-Returns:
-  int - description
+Tables accessed:
+  MyTable1
 
 Modification History:
 When        Who                 What
@@ -28,17 +25,7 @@ When        Who                 What
 
 *******************************************************************************/
 
-CREATE FUNCTION dbo.MyFunction
-(
-                @input int
-)
-RETURNS int
-AS
-    BEGIN
-
-        DECLARE @returnval int = @input;
-        RETURN @returnval;
-
-    END;
+CREATE VIEW dbo.MyView
+AS SELECT GETDATE() AS MyDate;
 
 GO
