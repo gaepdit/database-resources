@@ -1,6 +1,93 @@
 <?xml version="1.0"?>
 <PublicOptions>
   <ActiveProfile>Default</ActiveProfile>
+  <LanguagesOptionsPublic>
+    <Name>Java</Name>
+    <Prefix>String sql = "</Prefix>
+    <Suffix>";</Suffix>
+    <EscapeCharsForQuotes>\</EscapeCharsForQuotes>
+    <LengthLimit>40</LengthLimit>
+    <LineSeparator>\n"
+           + "</LineSeparator>
+    <IsEnable>true</IsEnable>
+  </LanguagesOptionsPublic>
+  <LanguagesOptionsPublic>
+    <Name>VB .NET</Name>
+    <Prefix>Dim sql As String
+sql = "</Prefix>
+    <Suffix>"</Suffix>
+    <EscapeCharsForQuotes>"</EscapeCharsForQuotes>
+    <LengthLimit>40</LengthLimit>
+    <LineSeparator>" + char(10) _
+    + "</LineSeparator>
+    <IsEnable>true</IsEnable>
+  </LanguagesOptionsPublic>
+  <LanguagesOptionsPublic>
+    <Name>C#</Name>
+    <Prefix>string sql = "</Prefix>
+    <Suffix>";</Suffix>
+    <EscapeCharsForQuotes>\</EscapeCharsForQuotes>
+    <LengthLimit>40</LengthLimit>
+    <LineSeparator>\n"
+           + "</LineSeparator>
+    <IsEnable>true</IsEnable>
+  </LanguagesOptionsPublic>
+  <LanguagesOptionsPublic>
+    <Name>Perl</Name>
+    <Prefix>$sql = '</Prefix>
+    <Suffix>';</Suffix>
+    <EscapeCharsForQuotes>\</EscapeCharsForQuotes>
+    <LengthLimit>40</LengthLimit>
+    <LineSeparator>\n'
+     . '</LineSeparator>
+    <IsEnable>true</IsEnable>
+  </LanguagesOptionsPublic>
+  <LanguagesOptionsPublic>
+    <Name>PHP</Name>
+    <Prefix>$sql = "</Prefix>
+    <Suffix>";</Suffix>
+    <EscapeCharsForQuotes>\</EscapeCharsForQuotes>
+    <LengthLimit>40</LengthLimit>
+    <LineSeparator>\n"
+     . "</LineSeparator>
+    <IsEnable>true</IsEnable>
+  </LanguagesOptionsPublic>
+  <LanguagesOptionsPublic>
+    <Name>Delphi</Name>
+    <Prefix>var
+  sql: string;
+begin
+  sql := '</Prefix>
+    <Suffix>';
+end;</Suffix>
+    <EscapeCharsForQuotes>'</EscapeCharsForQuotes>
+    <LengthLimit>40</LengthLimit>
+    <LineSeparator>' + #10
+       + '</LineSeparator>
+    <IsEnable>true</IsEnable>
+  </LanguagesOptionsPublic>
+  <LanguagesOptionsPublic>
+    <Name>Ruby</Name>
+    <Prefix>sql = '</Prefix>
+    <Suffix>'</Suffix>
+    <EscapeCharsForQuotes>'</EscapeCharsForQuotes>
+    <LengthLimit>40</LengthLimit>
+    <LineSeparator>\n'
+   &lt;&lt; '</LineSeparator>
+    <IsEnable>true</IsEnable>
+  </LanguagesOptionsPublic>
+  <LanguagesOptionsPublic>
+    <Name>C++</Name>
+    <Prefix>std::string sql;
+sql = "</Prefix>
+    <Suffix>";</Suffix>
+    <EscapeCharsForQuotes>\</EscapeCharsForQuotes>
+    <LengthLimit>40</LengthLimit>
+    <LineSeparator>\n"
+           + "</LineSeparator>
+    <IsEnable>true</IsEnable>
+  </LanguagesOptionsPublic>
+  <DefaultLanguageOptionsPublic>Java</DefaultLanguageOptionsPublic>
   <FormattingOptionsPublic>
     <Name>EPD IT Format</Name>
     <Description />
@@ -251,12 +338,13 @@
     <GeneralAddSpacesBeforeCommas>false</GeneralAddSpacesBeforeCommas>
     <GeneralAddSpacesAfterCommas>true</GeneralAddSpacesAfterCommas>
     <GeneralRemoveUnnecessaryBrackets>true</GeneralRemoveUnnecessaryBrackets>
+    <GeneralRemoveBracketsSystemName>false</GeneralRemoveBracketsSystemName>
     <GeneralAddStatementTerminator>true</GeneralAddStatementTerminator>
     <GeneralEncloseIdentifiersInBrackets>false</GeneralEncloseIdentifiersInBrackets>
     <GeneralEncloseColumnsInBrackets>false</GeneralEncloseColumnsInBrackets>
     <GeneralQualifyObjectNames>false</GeneralQualifyObjectNames>
     <GeneralWrapText>false</GeneralWrapText>
-    <GeneralCharactersToWrap>75</GeneralCharactersToWrap>
+    <GeneralCharactersToWrap>100</GeneralCharactersToWrap>
     <GeneralManageWhiteSpace>true</GeneralManageWhiteSpace>
     <GeneralManageWhiteSpaceType>ChangeSeveralEmptyLinesIntoOneEmptyLine</GeneralManageWhiteSpaceType>
     <GeneralKeepEmptyLineAroundComments>true</GeneralKeepEmptyLineAroundComments>
