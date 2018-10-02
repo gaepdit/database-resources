@@ -9,11 +9,13 @@ IF OBJECT_ID('dbo.MyTrigger') IS NOT NULL
     DROP TRIGGER dbo.MyTrigger;
 GO
 
-/*****************************************************************************
+CREATE TRIGGER dbo.MyTrigger ON dbo.MyTable
+AFTER UPDATE
+AS /*****************************************************************************
 
-Author:     Brian Gregory
-Created:    2017-??-??
-Overview:   General statement about WHAT the procedure is doing 
+Author:     Doug Waldron
+Created:    2018-??-??
+Overview:   General statement about WHAT the procedure is doing
 
 Tables written to:
   MyTable1
@@ -24,13 +26,10 @@ Tables accessed:
 Modification History:
 When        Who                 What
 ----------  ------------------  ----------------------------------------
-2017-??-??  BGregory            Initial Version
+2018-??-??  DWaldron            Initial Version
 
 *******************************************************************************/
 
-CREATE TRIGGER dbo.MyTrigger ON dbo.MyTable
-AFTER UPDATE
-AS
      SET NOCOUNT ON;
     BEGIN TRY
         -- Declare variables here if needed

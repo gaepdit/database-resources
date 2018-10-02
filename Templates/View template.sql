@@ -11,8 +11,8 @@ GO
 
 /*****************************************************************************
 
-Author:     Brian Gregory
-Created:    2017-??-??
+Author:     Doug Waldron
+Created:    2018-??-??
 Overview:   General statement about the purpose/use of the view
 
 Tables accessed:
@@ -21,7 +21,7 @@ Tables accessed:
 Modification History:
 When        Who                 What
 ----------  ------------------  ----------------------------------------
-2017-??-??  BGregory            Initial Version
+2018-??-??  DWaldron            Initial Version
 
 *******************************************************************************/
 

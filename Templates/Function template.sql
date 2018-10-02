@@ -9,10 +9,13 @@ IF OBJECT_ID('dbo.MyFunction') IS NOT NULL
     DROP FUNCTION dbo.MyFunction;
 GO
 
-/*****************************************************************************
+CREATE FUNCTION dbo.MyFunction(@input int)
+RETURNS int
 
-Author:     Brian Gregory
-Created:    2017-??-??
+AS /*****************************************************************************
+
+Author:     Doug Waldron
+Created:    2018-??-??
 Overview:   General statement about WHAT the function is doing 
 
 Input Parameters:
@@ -24,19 +27,13 @@ Returns:
 Modification History:
 When        Who                 What
 ----------  ------------------  ----------------------------------------
-2017-??-??  BGregory            Initial Version
+2018-??-??  DWaldron            Initial Version
 
 *******************************************************************************/
 
-CREATE FUNCTION dbo.MyFunction
-(
-                @input int
-)
-RETURNS int
-AS
     BEGIN
 
-        DECLARE @returnval int = @input;
+        DECLARE @returnval int = 0;
         RETURN @returnval;
 
     END;

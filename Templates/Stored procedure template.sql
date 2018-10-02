@@ -9,7 +9,10 @@ IF OBJECT_ID('dbo.MyProcedure') IS NULL
     EXEC ('CREATE PROCEDURE dbo.MyProcedure AS SET NOCOUNT ON;')
 GO
 
-/*****************************************************************************
+ALTER PROCEDURE dbo.MyProcedure
+          @inputParameter1 VARCHAR(1)
+        , @inputParameter2 INT
+AS /*****************************************************************************
 
 Author:     Doug Waldron
 Created:    2018-??-??
@@ -39,10 +42,6 @@ When        Who                 What
 
 *******************************************************************************/
 
-ALTER PROCEDURE dbo.MyProcedure
-          @inputParameter1 VARCHAR(1)
-        , @inputParameter2 INT
-AS
     SET XACT_ABORT, NOCOUNT ON;
     BEGIN TRY
     -- Declare variables here if needed
