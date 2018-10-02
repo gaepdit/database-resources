@@ -1,0 +1,23 @@
+<code_scheme name="Project" version="173">
+  <SqlCodeStyleSettings version="1">
+    <option name="QUERY_IN_ONE_STRING" value="3" />
+    <option name="SUBQUERY_INDENT_INSIDE" value="true" />
+    <option name="SELECT_EL_WRAP" value="3" />
+    <option name="SELECT_USE_AS_WORD" value="1" />
+    <option name="FROM_WRAP_ON" value="true" />
+    <option name="FROM_INDENT_JOIN" value="false" />
+    <option name="CORTEGE_CLOSING" value="1" />
+    <option name="EXPR_CASE_ELSE_ALIGN_THEN" value="true" />
+    <option name="EXPR_CASE_END" value="1" />
+    <option name="PRIMARY_KEY_NAME_TEMPLATE" value="PK_{table}" />
+    <option name="FOREIGN_KEY_NAME_TEMPLATE" value="FK_{table}_{ref_table}_{ref_columns}" />
+  </SqlCodeStyleSettings>
+  <codeStyleSettings language="SQL">
+    <option name="KEEP_FIRST_COLUMN_COMMENT" value="true" />
+    <indentOptions>
+      <option name="INDENT_SIZE" value="4" />
+      <option name="CONTINUATION_INDENT_SIZE" value="8" />
+      <option name="TAB_SIZE" value="4" />
+    </indentOptions>
+  </codeStyleSettings>
+</code_scheme>
