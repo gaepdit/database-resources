@@ -10,19 +10,18 @@ IF OBJECT_ID('dbo.MyFunction') IS NOT NULL
 GO
 
 CREATE FUNCTION dbo.MyFunction(@input int)
-RETURNS int
+    RETURNS int
 
 AS /*****************************************************************************
 
 Author:     Doug Waldron
-Created:    2018-??-??
-Overview:   General statement about WHAT the function is doing 
+Overview:   General statement about the purpose/use of the function
 
 Input Parameters:
-  @input - description
-  
+    @input - description
+
 Returns:
-  int - description
+    int - description
 
 Modification History:
 When        Who                 What
@@ -34,6 +33,7 @@ When        Who                 What
     BEGIN
 
         DECLARE @returnval int = 0;
+
         RETURN @returnval;
 
     END;

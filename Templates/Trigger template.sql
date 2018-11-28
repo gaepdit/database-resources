@@ -9,19 +9,20 @@ IF OBJECT_ID('dbo.MyTrigger') IS NOT NULL
     DROP TRIGGER dbo.MyTrigger;
 GO
 
-CREATE TRIGGER dbo.MyTrigger ON dbo.MyTable
-AFTER UPDATE
+CREATE TRIGGER dbo.MyTrigger
+    ON dbo.MyTable
+    AFTER UPDATE
+
 AS /*****************************************************************************
 
 Author:     Doug Waldron
-Created:    2018-??-??
-Overview:   General statement about WHAT the procedure is doing
+Overview:   General statement about the purpose/use of the trigger
 
 Tables written to:
-  MyTable1
-  
+    MyTable1
+
 Tables accessed:
-  MyTable2
+    MyTable2
 
 Modification History:
 When        Who                 What
@@ -30,21 +31,23 @@ When        Who                 What
 
 *******************************************************************************/
 
-     SET NOCOUNT ON;
-    BEGIN TRY
-        -- Declare variables here if needed
+    SET NOCOUNT ON;
+BEGIN TRY
 
-        BEGIN TRANSACTION;
+-- Declare variables here if needed
 
-        -- Add commands here
+BEGIN TRANSACTION;
 
-        COMMIT TRANSACTION;
-    END TRY
-    BEGIN CATCH
-        IF @@trancount > 0
-            ROLLBACK TRANSACTION;
-        DECLARE @msg nvarchar(2048) = ERROR_MESSAGE();
-        RAISERROR(@msg, 16, 1);
-    END CATCH;
+-- Add commands here
+
+COMMIT TRANSACTION;
+
+END TRY
+BEGIN CATCH
+IF @@trancount > 0
+    ROLLBACK TRANSACTION;
+DECLARE @msg nvarchar(2048) = ERROR_MESSAGE();
+RAISERROR (@msg, 16, 1);
+END CATCH;
 
 GO

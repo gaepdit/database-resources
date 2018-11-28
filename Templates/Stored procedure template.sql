@@ -10,13 +10,13 @@ IF OBJECT_ID('dbo.MyProcedure') IS NULL
 GO
 
 ALTER PROCEDURE dbo.MyProcedure
-          @inputParameter1 VARCHAR(1)
-        , @inputParameter2 INT
+        @inputParameter1 VARCHAR(1),
+        @inputParameter2 INT
+
 AS /*****************************************************************************
 
 Author:     Doug Waldron
-Created:    2018-??-??
-Purpose:    General statement about WHAT the procedure is doing
+Overview:   General statement about the purpose/use of the procedure
 
 Input Parameters:
     @inputParameter1 - Description
@@ -44,6 +44,7 @@ When        Who                 What
 
     SET XACT_ABORT, NOCOUNT ON;
     BEGIN TRY
+
     -- Declare variables here if needed
 
     BEGIN TRANSACTION;
@@ -54,6 +55,7 @@ When        Who                 What
     COMMIT TRANSACTION;
 
     -- Add final command here to select return data or assign output parameter values if needed
+
     END TRY
     BEGIN CATCH
     IF @@trancount > 0
