@@ -11,8 +11,9 @@ GO
 
 CREATE FUNCTION dbo.MyFunction(@input int)
     RETURNS int
+AS
 
-AS /*****************************************************************************
+    /***************************************************************************
 
 Author:     Doug Waldron
 Overview:   General statement about the purpose/use of the function
@@ -26,16 +27,16 @@ Returns:
 Modification History:
 When        Who                 What
 ----------  ------------------  ----------------------------------------
-2018-??-??  DWaldron            Initial Version
+2019-??-??  DWaldron            Initial Version
 
 *******************************************************************************/
 
-    BEGIN
+BEGIN
 
-        DECLARE @returnval int = 0;
+    DECLARE @returnval int = 0;
 
-        RETURN @returnval;
+    RETURN @returnval;
 
-    END;
+END;
 
 GO

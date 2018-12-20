@@ -12,8 +12,9 @@ GO
 CREATE TRIGGER dbo.MyTrigger
     ON dbo.MyTable
     AFTER UPDATE
+AS
 
-AS /*****************************************************************************
+    /***************************************************************************
 
 Author:     Doug Waldron
 Overview:   General statement about the purpose/use of the trigger
@@ -27,27 +28,27 @@ Tables accessed:
 Modification History:
 When        Who                 What
 ----------  ------------------  ----------------------------------------
-2018-??-??  DWaldron            Initial Version
+2019-??-??  DWaldron            Initial Version
 
 *******************************************************************************/
 
     SET NOCOUNT ON;
 BEGIN TRY
 
--- Declare variables here if needed
+    -- Declare variables here if needed
 
-BEGIN TRANSACTION;
+    BEGIN TRANSACTION
 
--- Add commands here
+        -- Add commands here
 
-COMMIT TRANSACTION;
+    COMMIT TRANSACTION;
 
 END TRY
 BEGIN CATCH
-IF @@trancount > 0
-    ROLLBACK TRANSACTION;
-DECLARE @msg nvarchar(2048) = ERROR_MESSAGE();
-RAISERROR (@msg, 16, 1);
+    IF @@trancount > 0
+        ROLLBACK TRANSACTION;
+    DECLARE @msg nvarchar(2048) = ERROR_MESSAGE();
+    RAISERROR (@msg, 16, 1);
 END CATCH;
 
 GO

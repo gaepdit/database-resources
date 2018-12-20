@@ -11,7 +11,7 @@ GO
 
 CREATE VIEW dbo.MyView AS
 
-    /*****************************************************************************
+    /***************************************************************************
 
 Author:     Doug Waldron
 Overview:   General statement about the purpose/use of the view
@@ -22,10 +22,10 @@ Tables accessed:
 Modification History:
 When        Who                 What
 ----------  ------------------  ----------------------------------------
-2018-??-??  DWaldron            Initial Version
+2019-??-??  DWaldron            Initial Version
 
 *******************************************************************************/
 
-    SELECT GETDATE() AS MyDate;
+SELECT GETDATE() AS MyDate;
 
 GO
