@@ -1,4 +1,4 @@
-USE [airbranch];
+USE airbranch;
 GO
 SET ANSI_NULLS ON;
 GO
@@ -11,8 +11,8 @@ GO
 
 ALTER PROCEDURE dbo.MyProcedure
     @inputParameter1 nvarchar(1),
-    @inputParameter2 int
-AS
+        @inputParameter2 int
+    AS
 
     /***************************************************************************
 
@@ -57,11 +57,14 @@ When        Who                 What
 
         -- Add queries here to select return data or assign output parameter values if needed
 
+        RETURN 0;
+
     END TRY
     BEGIN CATCH
         IF @@trancount > 0
             ROLLBACK TRANSACTION;
-        DECLARE @msg nvarchar(2048) = ERROR_MESSAGE();
+        DECLARE
+            @msg nvarchar(2048) = ERROR_MESSAGE();
         RAISERROR (@msg, 16, 1);
         RETURN -1;
     END CATCH;
