@@ -65,7 +65,7 @@ When        Who                 What
             ROLLBACK TRANSACTION;
         DECLARE
             @msg nvarchar(2048) = ERROR_MESSAGE();
-        RAISERROR (@msg, 16, 1);
+        RAISERROR (@msg, -1, 1);
         RETURN -1;
     END CATCH;
 
