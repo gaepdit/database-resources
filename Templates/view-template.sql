@@ -11,7 +11,7 @@ GO
 
 CREATE VIEW dbo.MyView AS
 
-    /***************************************************************************
+/*******************************************************************************
 
 Author:     Doug Waldron
 Overview:   General statement about the purpose/use of the view
@@ -22,7 +22,7 @@ Tables accessed:
 Modification History:
 When        Who                 What
 ----------  ------------------  ------------------------------------------------
-2019-??-??  DWaldron            Initial Version
+2020-01-31  DWaldron            Initial Version
 
 *******************************************************************************/
 

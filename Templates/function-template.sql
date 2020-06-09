@@ -13,7 +13,7 @@ CREATE FUNCTION dbo.MyFunction(@input int)
     RETURNS int
 AS
 
-    /***************************************************************************
+/*******************************************************************************
 
 Author:     Doug Waldron
 Overview:   General statement about the purpose/use of the function
@@ -27,7 +27,7 @@ Returns:
 Modification History:
 When        Who                 What
 ----------  ------------------  ------------------------------------------------
-2019-??-??  DWaldron            Initial Version
+2020-01-31  DWaldron            Initial Version
 
 *******************************************************************************/
 
@@ -38,5 +38,4 @@ BEGIN
     RETURN @returnval;
 
 END;
-
 GO

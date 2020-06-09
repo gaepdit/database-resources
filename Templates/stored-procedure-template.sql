@@ -14,7 +14,7 @@ ALTER PROCEDURE dbo.MyProcedure
         @inputParameter2 int
     AS
 
-    /***************************************************************************
+/*******************************************************************************
 
 Author:     Doug Waldron
 Overview:   General statement about the purpose/use of the procedure
@@ -39,7 +39,7 @@ Tables accessed:
 Modification History:
 When        Who                 What
 ----------  ------------------  ------------------------------------------------
-2019-??-??  DWaldron            Initial Version
+2020-01-31  DWaldron            Initial Version
 
 *******************************************************************************/
 
@@ -64,9 +64,9 @@ When        Who                 What
         IF @@trancount > 0
             ROLLBACK TRANSACTION;
         DECLARE
-            @msg nvarchar(2048) = ERROR_MESSAGE();
-        RAISERROR (@msg, -1, 1);
+            @ErrorMessage nvarchar(4000) = ERROR_MESSAGE(),
+            @ErrorSeverity int = ERROR_SEVERITY();
+        RAISERROR (@ErrorMessage, @ErrorSeverity, 1);
         RETURN -1;
     END CATCH;
-
 GO
