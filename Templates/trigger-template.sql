@@ -5,11 +5,7 @@ GO
 SET QUOTED_IDENTIFIER ON;
 GO
 
-IF OBJECT_ID('dbo.MyTrigger') IS NOT NULL
-    DROP TRIGGER dbo.MyTrigger;
-GO
-
-CREATE TRIGGER dbo.MyTrigger
+CREATE OR ALTER TRIGGER dbo.MyTrigger
     ON dbo.MyTable
     AFTER UPDATE AS
 
@@ -27,7 +23,7 @@ Tables accessed:
 Modification History:
 When        Who                 What
 ----------  ------------------  ------------------------------------------------
-2020-01-31  DWaldron            Initial Version
+2021-02-02  DWaldron            Initial Version
 
 *******************************************************************************/
 

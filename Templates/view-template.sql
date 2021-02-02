@@ -5,11 +5,7 @@ GO
 SET QUOTED_IDENTIFIER ON;
 GO
 
-IF OBJECT_ID('dbo.MyView') IS NOT NULL
-    DROP VIEW dbo.MyView;
-GO
-
-CREATE VIEW dbo.MyView AS
+CREATE OR ALTER VIEW dbo.MyView AS
 
 /*******************************************************************************
 
@@ -22,7 +18,7 @@ Tables accessed:
 Modification History:
 When        Who                 What
 ----------  ------------------  ------------------------------------------------
-2020-01-31  DWaldron            Initial Version
+2021-02-02  DWaldron            Initial Version
 
 *******************************************************************************/
 

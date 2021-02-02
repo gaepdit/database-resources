@@ -5,11 +5,8 @@ GO
 SET QUOTED_IDENTIFIER ON;
 GO
 
-IF OBJECT_ID('dbo.MyFunction') IS NOT NULL
-    DROP FUNCTION dbo.MyFunction;
-GO
-
-CREATE FUNCTION dbo.MyFunction(@input int)
+CREATE OR
+ALTER FUNCTION dbo.MyFunction(@input int)
     RETURNS int
 AS
 
@@ -27,7 +24,7 @@ Returns:
 Modification History:
 When        Who                 What
 ----------  ------------------  ------------------------------------------------
-2020-01-31  DWaldron            Initial Version
+2021-02-02  DWaldron            Initial Version
 
 *******************************************************************************/
 

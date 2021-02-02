@@ -5,14 +5,10 @@ GO
 SET QUOTED_IDENTIFIER ON;
 GO
 
-IF OBJECT_ID('dbo.MyProcedure') IS NULL
-    EXEC ('CREATE PROCEDURE dbo.MyProcedure AS SET NOCOUNT ON;')
-GO
-
-ALTER PROCEDURE dbo.MyProcedure
-    @inputParameter1 nvarchar(1),
-        @inputParameter2 int
-    AS
+CREATE OR
+ALTER PROCEDURE dbo.MyProcedure @inputParameter1 nvarchar(1),
+                                @inputParameter2 int
+AS
 
 /*******************************************************************************
 
@@ -39,34 +35,34 @@ Tables accessed:
 Modification History:
 When        Who                 What
 ----------  ------------------  ------------------------------------------------
-2020-01-31  DWaldron            Initial Version
+2021-02-02  DWaldron            Initial Version
 
 *******************************************************************************/
 
     SET XACT_ABORT, NOCOUNT ON;
-    BEGIN TRY
+BEGIN TRY
 
-        -- Declare variables here if needed
+    -- Declare variables here if needed
 
-        BEGIN TRANSACTION
+    BEGIN TRANSACTION
 
-            -- Add commands here
-            -- Can include multiple transactions if needed
+        -- Add commands here
+        -- Can include multiple transactions if needed
 
-        COMMIT TRANSACTION;
+    COMMIT TRANSACTION;
 
-        -- Add queries here to select return data or assign output parameter values if needed
+    -- Add queries here to select return data or assign output parameter values if needed
 
-        RETURN 0;
+    RETURN 0;
 
-    END TRY
-    BEGIN CATCH
-        IF @@trancount > 0
-            ROLLBACK TRANSACTION;
-        DECLARE
-            @ErrorMessage nvarchar(4000) = ERROR_MESSAGE(),
-            @ErrorSeverity int = ERROR_SEVERITY();
-        RAISERROR (@ErrorMessage, @ErrorSeverity, 1);
-        RETURN -1;
-    END CATCH;
+END TRY
+BEGIN CATCH
+    IF @@trancount > 0
+        ROLLBACK TRANSACTION;
+    DECLARE
+        @ErrorMessage nvarchar(4000) = ERROR_MESSAGE(),
+        @ErrorSeverity int = ERROR_SEVERITY();
+    RAISERROR (@ErrorMessage, @ErrorSeverity, 1);
+    RETURN -1;
+END CATCH;
 GO
