@@ -5,37 +5,37 @@ GO
 SET QUOTED_IDENTIFIER ON;
 GO
 
-CREATE OR
-ALTER PROCEDURE dbo.MyProcedure @inputParameter1 nvarchar(1),
-                                @inputParameter2 int
+CREATE OR ALTER PROCEDURE dbo.MyProcedure
+    @inputParameter1 nvarchar(1),
+    @inputParameter2 int
 AS
 
 /*******************************************************************************
 
 Author:     Doug Waldron
-Overview:   General statement about the purpose/use of the procedure
+Overview:   General statement about the purpose/use of the procedure.
 
 Input Parameters:
-    @inputParameter1 - Description
-    @inputParameter2 - Description
+  @inputParameter1 - Description
+  @inputParameter2 - Description
 
 Output Parameters:
-    None
+  None
 
 Returns:
-     0 on success
-    -1 on error
+   0 on success
+  -1 on error
 
 Tables written to:
-    MyTable1
+  MyTable1
 
 Tables accessed:
-    MyTable2
+  MyTable2
 
 Modification History:
 When        Who                 What
 ----------  ------------------  ------------------------------------------------
-2021-02-02  DWaldron            Initial Version
+2021-07-12  DWaldron            Initial Version
 
 *******************************************************************************/
 
@@ -44,17 +44,16 @@ BEGIN TRY
 
     -- Declare variables here if needed
 
-    BEGIN TRANSACTION
+    BEGIN TRANSACTION;
 
-        -- Add commands here
-        -- Can include multiple transactions if needed
+    -- Can include multiple transactions if needed
+    -- Don't include return statement within transaction
 
     COMMIT TRANSACTION;
 
     -- Add queries here to select return data or assign output parameter values if needed
 
     RETURN 0;
-
 END TRY
 BEGIN CATCH
     IF @@trancount > 0

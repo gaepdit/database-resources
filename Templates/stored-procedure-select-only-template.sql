@@ -5,24 +5,35 @@ GO
 SET QUOTED_IDENTIFIER ON;
 GO
 
-CREATE OR ALTER VIEW dbo.MyView
+CREATE OR ALTER PROCEDURE dbo.MySelectProcedure
+    @Parameter1 nvarchar(1),
+    @Parameter2 int
 AS
 
 /*******************************************************************************
 
 Author:     Doug Waldron
-Overview:   General statement about the purpose/use of the view.
+Overview:   General statement about the purpose/use of the procedure.
+
+Input Parameters:
+  @Parameter1 - Description
+  @Parameter2 - Description
 
 Tables accessed:
-  MyTable1
+  MyTable2
 
 Modification History:
 When        Who                 What
 ----------  ------------------  ------------------------------------------------
-2021-02-02  DWaldron            Initial Version
+2021-07-28  DWaldron            Initial Version
 
 *******************************************************************************/
 
-SELECT GETDATE() AS MyDate;
+BEGIN
+    SET NOCOUNT ON;
 
+    -- Add queries here to select data.
+    select sysdatetimeoffset();
+
+END;
 GO

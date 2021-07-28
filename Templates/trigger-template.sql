@@ -7,18 +7,19 @@ GO
 
 CREATE OR ALTER TRIGGER dbo.MyTrigger
     ON dbo.MyTable
-    AFTER UPDATE AS
+    AFTER UPDATE
+    AS
 
 /*******************************************************************************
 
 Author:     Doug Waldron
-Overview:   General statement about the purpose/use of the trigger
+Overview:   General statement about the purpose/use of the trigger.
 
 Tables written to:
-    MyTable1
+  MyTable1
 
 Tables accessed:
-    MyTable2
+  MyTable2
 
 Modification History:
 When        Who                 What

@@ -5,15 +5,14 @@ GO
 SET QUOTED_IDENTIFIER ON;
 GO
 
-CREATE OR
-ALTER FUNCTION dbo.MyFunction(@input int)
+CREATE OR ALTER FUNCTION dbo.MyFunction(@input int)
     RETURNS int
 AS
 
 /*******************************************************************************
 
 Author:     Doug Waldron
-Overview:   General statement about the purpose/use of the function
+Overview:   General statement about the purpose/use of the function.
 
 Input Parameters:
     @input - description
@@ -30,7 +29,7 @@ When        Who                 What
 
 BEGIN
 
-    DECLARE @returnval int = 0;
+    DECLARE @returnval int = @input;
 
     RETURN @returnval;
 
