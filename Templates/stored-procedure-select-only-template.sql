@@ -2,8 +2,6 @@ USE airbranch;
 GO
 SET ANSI_NULLS ON;
 GO
-SET QUOTED_IDENTIFIER ON;
-GO
 
 CREATE OR ALTER PROCEDURE dbo.MySelectProcedure
     @Parameter1 nvarchar(1),
