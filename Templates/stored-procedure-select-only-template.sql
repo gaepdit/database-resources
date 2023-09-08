@@ -11,7 +11,8 @@ AS
 /**************************************************************************************************
 
 Author:     Doug Waldron
-Overview:   General statement about the purpose/use of the procedure.
+Overview:
+  General statement about the purpose/use of the procedure.
 
 Input Parameters:
   @Parameter1 - Description
@@ -23,15 +24,15 @@ Tables accessed:
 Modification History:
 When        Who                 What
 ----------  ------------------  -------------------------------------------------------------------
-2022-11-15  DWaldron            Initial version (GECO-001)
+2023-03-16  DWaldron            Initial version (GECO-001)
 
 ***************************************************************************************************/
 
 BEGIN
-    SET NOCOUNT ON;
+    SET NOCOUNT ON
 
     -- Add queries here to select data.
     select sysdatetimeoffset();
 
-END;
+END
 GO

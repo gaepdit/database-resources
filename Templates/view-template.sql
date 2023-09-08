@@ -9,7 +9,8 @@ AS
 /**************************************************************************************************
 
 Author:     Doug Waldron
-Overview:   General statement about the purpose/use of the view.
+Overview:
+  General statement about the purpose/use of the view.
 
 Tables accessed:
   MyTable1
@@ -17,7 +18,7 @@ Tables accessed:
 Modification History:
 When        Who                 What
 ----------  ------------------  -------------------------------------------------------------------
-2022-11-15  DWaldron            Initial version (GECO-001)
+2023-03-16  DWaldron            Initial version (GECO-001)
 
 ***************************************************************************************************/
 

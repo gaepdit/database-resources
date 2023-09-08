@@ -11,7 +11,8 @@ AS
 /**************************************************************************************************
 
 Author:     Doug Waldron
-Overview:   General statement about the purpose/use of the procedure.
+Overview:
+  General statement about the purpose/use of the procedure.
 
 Input Parameters:
   @inputParameter1 - Description
@@ -33,11 +34,11 @@ Tables accessed:
 Modification History:
 When        Who                 What
 ----------  ------------------  -------------------------------------------------------------------
-2022-11-15  DWaldron            Initial version (GECO-001)
+2023-03-16  DWaldron            Initial version (GECO-001)
 
 ***************************************************************************************************/
 
-    SET XACT_ABORT, NOCOUNT ON;
+    SET XACT_ABORT, NOCOUNT ON
 BEGIN TRY
 
     -- Declare variables here if needed
@@ -61,5 +62,5 @@ BEGIN CATCH
         @ErrorSeverity int = ERROR_SEVERITY();
     RAISERROR (@ErrorMessage, @ErrorSeverity, 1);
     RETURN -1;
-END CATCH;
+END CATCH
 GO
