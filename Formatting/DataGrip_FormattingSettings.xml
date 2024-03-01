@@ -1,5 +1,5 @@
 <code_scheme name="Project" version="173">
-  <option name="SOFT_MARGINS" value="80,120" />
+  <option name="SOFT_MARGINS" value="80,100,120" />
   <DB2CodeStyleSettings version="6">
     <option name="USE_GENERAL_STYLE" value="false" />
     <option name="TYPE_CASE" value="1" />
@@ -46,29 +46,6 @@
     <option name="PRIMARY_KEY_NAME_TEMPLATE" value="PK_{table}" />
     <option name="FOREIGN_KEY_NAME_TEMPLATE" value="FK_{table}_{ref_table}_{ref_columns}" />
   </DerbyCodeStyleSettings>
-  <H2CodeStyleSettings version="6">
-    <option name="USE_GENERAL_STYLE" value="false" />
-    <option name="TYPE_CASE" value="1" />
-    <option name="CUSTOM_TYPE_CASE" value="1" />
-    <option name="WITH_EL_LINE" value="101" />
-    <option name="SELECT_EL_WRAP" value="0" />
-    <option name="SELECT_USE_AS_WORD" value="1" />
-    <option name="FROM_WRAP_ON" value="true" />
-    <option name="FROM_INDENT_JOIN" value="false" />
-    <option name="TABLE_OPENING" value="1" />
-    <option name="TABLE_CONTENT" value="2" />
-    <option name="TABLE_CLOSING" value="3" />
-    <option name="POST_OPT_WRAP_1" value="true" />
-    <option name="CREATE_SCHEMA_CONTENT_INDENT" value="false" />
-    <option name="IMP_COMMON_WRAP_EVERY_STATEMENT" value="true" />
-    <option name="IMP_DECLARE_EL_WRAP" value="1" />
-    <option name="IMP_IF_THEN_WRAP_THEN" value="true" />
-    <option name="CORTEGE_CLOSING" value="9" />
-    <option name="EXPR_CASE_ELSE_ALIGN_THEN" value="true" />
-    <option name="EXPR_CASE_END" value="1" />
-    <option name="PRIMARY_KEY_NAME_TEMPLATE" value="PK_{table}" />
-    <option name="FOREIGN_KEY_NAME_TEMPLATE" value="FK_{table}_{ref_table}_{ref_columns}" />
-  </H2CodeStyleSettings>
   <H2CodeStyleSettings version="6">
     <option name="USE_GENERAL_STYLE" value="false" />
     <option name="TYPE_CASE" value="1" />
