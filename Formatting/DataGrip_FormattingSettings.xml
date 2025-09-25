@@ -1,17 +1,22 @@
 <code_scheme name="Default" version="173">
   <option name="SOFT_MARGINS" value="100" />
   <MSSQLCodeStyleSettings version="7">
-    <option name="USE_GENERAL_STYLE" value="false" />
     <option name="FROM_WRAP_ON" value="true" />
     <option name="FROM_ONLY_JOIN_INDENT" value="1" />
     <option name="FROM_PLACE_ON" value="11" />
     <option name="WHERE_EL_BOUND" value="0" />
+    <option name="ROUTINE_ARG_OPENING" value="3" />
+    <option name="ROUTINE_ARG_CONTENT" value="2" />
+    <option name="ROUTINE_ARG_CLOSING" value="4" />
   </MSSQLCodeStyleSettings>
   <SqlCodeStyleSettings version="7">
     <option name="FROM_WRAP_ON" value="true" />
+    <option name="FROM_INDENT_JOIN" value="false" />
+    <option name="FROM_ONLY_JOIN_INDENT" value="1" />
     <option name="FROM_PLACE_ON" value="11" />
+    <option name="ROUTINE_ARG_OPENING" value="3" />
+    <option name="ROUTINE_ARG_CONTENT" value="2" />
+    <option name="ROUTINE_ARG_CLOSING" value="4" />
+    <option name="ROUTINE_ARG_ALIGN_TYPES" value="true" />
   </SqlCodeStyleSettings>
-  <codeStyleSettings language="SQL">
-    <option name="KEEP_FIRST_COLUMN_COMMENT" value="false" />
-  </codeStyleSettings>
 </code_scheme>

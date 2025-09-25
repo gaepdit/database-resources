@@ -5,7 +5,7 @@ GO
 
 CREATE OR ALTER PROCEDURE dbo.MyProcedure
     @inputParameter1 nvarchar(1),
-    @inputParameter2 int
+    @inputParam2     int
 AS
 
 /**************************************************************************************************
