@@ -1,7 +1,5 @@
 USE airbranch;
 GO
-SET ANSI_NULLS ON;
-GO
 
 CREATE OR ALTER PROCEDURE dbo.MyProcedure
     @inputParameter1 nvarchar(1),
@@ -34,7 +32,7 @@ Tables accessed:
 Modification History:
 When        Who                 What
 ----------  ------------------  -------------------------------------------------------------------
-2025-06-03  DWaldron            Initial version (geco#1234)
+2026-01-16  DWaldron            Initial version (geco#1234)
 
 ***************************************************************************************************/
 
